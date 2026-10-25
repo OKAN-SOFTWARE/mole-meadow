@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e9">
+  <meta name="description" content="A tiny meadow. A very big mole problem. Play a 30-second 3D whack-a-mole round.">
+  <title>Mole Meadow — A little backyard chaos</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/game.js"></script>
+</head>
+<body>
+  <header><a class="brand" href="/">✳ <span>mole meadow</span></a><span class="edition">THE BACKYARD ARCADE / VOL. 01</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">SMALL CRITTERS. BIG MAIN CHARACTER ENERGY.</p><h1>A little backyard<br><em>chaos.</em></h1><p>They pop up. You bop them. Keep the meadow in check.</p></section>
+    <div class="layout">
+      <section class="game-panel" aria-label="Whack-a-mole game">
+        <div class="stats"><div><span>SCORE</span><strong id="score">000</strong></div><div class="round-tag">30 SECONDS OF GLORY</div><div><span>TIME LEFT</span><strong><span id="time">30</span><small>s</small></strong></div></div>
+        <div id="arena"><canvas id="game" aria-label="3D mole board. Keyboard holes: Q W E, A S D, Z X C." tabindex="0"></canvas><div class="scene-label">THE MEADOW · 9 HOLES · NO MERCY</div><div id="splash"><span class="pill">FRESH AIR. FAST REFLEXES.</span><h2>Ready to make<br>some mole-hills?</h2><p>+10 for every mole. Catch as many as you can.</p><button id="start" type="button">Let’s play <span>↗</span></button></div><div id="float" aria-hidden="true">+10</div></div>
+        <div class="game-footer"><span id="status" role="status">Your meadow awaits.</span><span>CLICK / TAP / QWE · ASD · ZXC</span></div>
+      </section>
+      <aside class="leaderboard"><div class="leader-heading"><span class="eyebrow">THE LOCAL LEGENDS</span><span>↗</span></div><h2>Hall of <em>fame.</em></h2><p>Big scores. Small bragging rights.</p><ol id="leaders" aria-label="Top ten high scores"></ol><p id="leader-message" role="status"></p><button id="refresh" class="text-button" type="button">Refresh scores ↻</button><div class="tip"><span>FIELD NOTES / 001</span><p>One mole, one bop.<br>Keep your eyes on the whole patch.</p></div></aside>
+    </div>
+    <footer>MADE FOR A QUICK BREAK.<span>NO ACCOUNTS. JUST MOLES.</span></footer>
+  </main>
+  <dialog id="result" aria-labelledby="result-title"><form id="score-form"><p class="eyebrow">THAT’S A WRAP</p><h2 id="result-title">Nice bopping.</h2><p>You scored <strong id="final-score">0</strong> points.</p><label for="player-name">Put your name on the board</label><input id="player-name" name="name" maxlength="24" required autocomplete="nickname" placeholder="Your name"><button id="submit-score" type="submit">Save my score ↗</button><p id="submit-status" role="status"></p><button id="play-again" class="text-button" type="button">Play again →</button></form></dialog>
+</body>
+</html>

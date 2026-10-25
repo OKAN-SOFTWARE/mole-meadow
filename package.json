@@ -1,0 +1,15 @@
+{
+  "name": "mole-meadow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A Three.js whack-a-mole arcade with an Express and JSON-file leaderboard.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node backend/server.js",
+    "backend": "node --watch backend/server.js",
+    "frontend": "node frontend/dev-server.js",
+    "test": "node --test backend/test/*.test.js"
+  },
+  "dependencies": { "express": "^5.1.0", "three": "^0.180.0" }
+}
